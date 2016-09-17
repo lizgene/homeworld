@@ -1,18 +1,47 @@
-<h1>Homeworld</h1>
-<h2>your home your thoughts your world</h2>
-
-<div class="col-sm-12 col-md-4">
-  <div class="thumbnail">
-    <%= image_tag @user["profile_picture"] %>
+<div class="container">
+  <div class="row text-center">
+    <h1><%= @user["username"] %></h1>
+    <h2>your home your thoughts your world</h2>
   </div>
-</div>
 
-<div class="row">
-  <% @media.each do |photo| %>
-    <div class="col-sm-12 col-md-4">
-      <div class="thumbnail">
-        <%= image_tag photo["images"]["standard_resolution"]["url"] %>
-      </div>
+  <div class="row">
+    <div class="col-sm-2 col-md-2">
+      <%= image_tag @user["profile_picture"], class: 'img-circle' %>
     </div>
-  <% end %>
+    <div class="col-sm-10 col-md-10">
+      <%= image_tag "rainbowbg.jpg", style: "height: 190px; width: 100%;" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-md-2 text-center">
+      <h3 style="margin-top: -25px;">Liz Hubertz</h3>
+    </div>
+    <div class="col-sm-10 col-md-10">
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div>
+      <h3>This is my description</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @media.each do |photo| %>
+      <div class="col-sm-12 col-md-4">
+        <div class="thumbnail">
+          <%= image_tag photo["images"]["standard_resolution"]["url"] %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row center">
+    <div class="col-sm-8">
+      <h2>This homepage design is based on this original wireframe by the Homeworld student team:</h2>
+
+      <%= image_tag "wireframe.JPG" %>
+    </div>
+  </div>
 </div>
