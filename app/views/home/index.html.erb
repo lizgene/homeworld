@@ -1,3 +1,18 @@
-<h1>I am home!</h1>
-<h2>your home your thoughts your world </h2>
-cat
+<h1>Homeworld</h1>
+<h2>your home your thoughts your world</h2>
+
+<div class="col-sm-12 col-md-4">
+  <div class="thumbnail">
+    <%= image_tag @user["profile_picture"] %>
+  </div>
+</div>
+
+<div class="row">
+  <%= @media.each do |photo| %>
+    <div class="col-sm-12 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag photo["images"]["standard_resolution"]["url"] %>
+      </div>
+    </div>
+  <% end %>
+</div>
