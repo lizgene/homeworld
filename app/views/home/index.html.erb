@@ -26,9 +26,50 @@
 
   <div class="row text-center">
     <div>
-      <h3>This is my description</h3>
+      <h3>Hi, I'm Liz! I like writing, art, music, and philosophy. :-)</h3>
     </div>
   </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Posts
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Philosophy</a></li>
+          <li><a href="#">Writing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="dropdown">
+        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Community
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Bob</a></li>
+          <li><a href="#">Jill</a></li>
+          <li><a href="#">Sandy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="dropdown">
+        <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Flagged
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Awesome art post</a></li>
+          <li><a href="#">Music post</a></li>
+          <li><a href="#">Art I want to buy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
 
   <div class="row">
     <% @media.each do |photo| %>
